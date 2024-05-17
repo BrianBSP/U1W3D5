@@ -225,17 +225,18 @@ console.log(mioCompleanno(ilGiornoDelMioCompleanno));
   deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
-/* console.log("----- Es 11 -----");
+console.log("----- Es 11 -----");
 const me2 = {
   name: "Brian",
   surname: "Pelinku",
   age: 30,
 };
 const eliminaLaProprieta = function deleteProp(oggetto, stringa) {
-  delete oggetto.stringa;
+  delete oggetto[stringa];
+  return oggetto;
 };
 
-console.log(eliminaLaProprieta(me2, stringa)); */
+console.log(eliminaLaProprieta(me2, "surname"));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
@@ -450,6 +451,7 @@ console.log(searchAndDivide("Avengers"));
   dell'elemento nella posizione ricevuta come parametro.
 */
 console.log("----- Es 19 -----");
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
