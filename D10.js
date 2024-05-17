@@ -475,18 +475,40 @@ const stampaContenutoColonne = () => {
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 console.log("----- Es 23 -----");
+const addBackground = () => {
+  const urlsColorati = getElementsByTagName("a");
+  urlsColorati.style.Background = "red";
+};
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 console.log("----- Es 24 -----");
+const aggiungiElementoLista = () => {
+  const nuovoLi = document.createElement("li");
+  nuovoLi.innerText = "Nuovo Elemnto Lista";
+  const ul = document.getElementById("myList");
+  ul.appendChild(nuovoLi);
+};
+addToTheSecond();
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 console.log("----- Es 25 -----");
+const EliminaLista = () => {
+  const laMiaLista = document.getElementById("myList");
+  laMiaLista.remove();
+};
+EliminaLista();
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 console.log("----- Es 26 -----");
+const assegnaClasse = () => {
+  const tuttiTr = document.querySelectorAll("tr");
+  for (let i = 0; i < tuttiTr.length; i++) {
+    tuttiTr[i].classList.add("test");
+  }
+};
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
