@@ -168,7 +168,7 @@ console.log("Oggi è:", whatDayIsIt());
 console.log("----- Es 08 -----");
 
 const tiraIlDado = function rollTheDices(numero) {
-  const tiri = [];
+  //const tiri = [];
   const user = {
     sum: 0,
     tiri: [],
@@ -429,7 +429,7 @@ console.log(searchByTitle("Avenger"));
   mentre "unmatch" deve includere tutti i rimanenti.
 */
 console.log("----- Es 18 -----");
-const searchAndDivide = (stringa) => {
+/* const searchAndDivide = (stringa) => {
   const films = {
     match: [],
     unmatch: [],
@@ -445,7 +445,7 @@ const searchAndDivide = (stringa) => {
   return films;
 };
 
-console.log(searchAndDivide("Avengers"));
+console.log(searchAndDivide("Avengers")); */
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo 
   dell'elemento nella posizione ricevuta come parametro.
@@ -484,23 +484,24 @@ const addBackground = () => {
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-console.log("----- Es 24 -----");
+/* console.log("----- Es 24 -----");
 const aggiungiElementoLista = () => {
   const nuovoLi = document.createElement("li");
   nuovoLi.innerText = "Nuovo Elemnto Lista";
   const ul = document.getElementById("myList");
   ul.appendChild(nuovoLi);
 };
-addToTheSecond();
+aggiungiElementoLista(); */
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 console.log("----- Es 25 -----");
-const EliminaLista = () => {
+/* const EliminaLista = () => {
   const laMiaLista = document.getElementById("myList");
   laMiaLista.remove();
 };
-EliminaLista();
+EliminaLista(); */
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
@@ -514,7 +515,8 @@ const assegnaClasse = () => {
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
-  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" 
+  (asterischi) dell'altezza fornita.
 
   Esempio:
   halfTree(3)
@@ -525,6 +527,16 @@ const assegnaClasse = () => {
 
 */
 console.log("----- Es 27 -----");
+
+const halfTree = (numero) => {
+  for (let i = 0; i < numero; i++) {
+    let asterisco = "*".repeat(i);
+    console.log(asterisco);
+  }
+};
+
+halfTree(6);
+console.log(halfTree());
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -537,6 +549,15 @@ console.log("----- Es 27 -----");
 
 */
 console.log("----- Es 28 -----");
+const tree = (numero) => {
+  for (let i = 0; i < numero; i++) {
+    let spazio = " ".repeat(numero - i);
+    let asterisco = "*".repeat(2 * i - 1);
+    console.log(spazio + asterisco + spazio);
+  }
+};
+tree(5);
+console.log(tree());
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
